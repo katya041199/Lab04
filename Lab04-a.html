@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Задание 3</title>
+    
+    <script>
+//НА ТРОЙКУ
+function rost() {
+        var mom = parseInt(document.getElementById('mom').value);
+        var dad = parseInt(document.getElementById('dad').value);
+        var sred = (mom+dad)/2;
+        var dev = sred - 6.4;
+        var boy = sred + 6.4;
+        document.getElementById('r_girl').innerHTML = "Девочка: " + dev;
+        document.getElementById('r_boy').innerHTML = "Мальчик: " + boy;
+      }
+    </script>
+  </head>
+  
+  <body>
+    <h1>НА ТРОЙКУ</h1>
+    <p>Введите рост мамы</p>
+        <input type="text" id="mom">
+    <p>Введите рост папы</p>
+        <input type="text" id="dad"><br>
+        <input type="button" value="Рассчитать рост ребенка" onclick="rost();">
+    <div id="r_girl"></div>
+    <div id="r_boy"></div>
+  </body>
+</html>

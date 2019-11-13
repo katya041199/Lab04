@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Задание 3</title>
+    
+    <script>
+//НА ЧЕТВЕРКУ
+    function voz_w() { /*Возраст женщины*/
+        var voz_m = parseInt(document.getElementById('vozrast_m').value);
+        var woman = voz_m / 2 + 7;
+        document.getElementById('v_girl').innerHTML = "Идеальный возраст женщины " + woman;
+      }
+
+    function voz_m() { /*Возраст мужчины*/
+        var voz_w = parseInt(document.getElementById('vozrast_w').value);
+        var man = 2 * voz_w - 17;
+        document.getElementById('v_boy').innerHTML = "Идеальный возраст мужчины " + man;
+      }
+    </script>
+  </head>
+  
+  <body>
+    <h1>НА ЧЕТВЕРКУ</h1>
+    <p>Введите возраст мужчины </p>
+        <input type="text" id="vozrast_m"><br>
+        <input type="button" value="Рассчитать" onclick="voz_w();">
+    <div id="v_girl"></div>
+    
+    <p>Введите возраст женщины </p>
+        <input type="text" id="vozrast_w"><br>
+        <input type="button" value="Рассчитать" onclick="voz_m();">
+    <div id="v_boy"></div>
+  </body>
+</html>

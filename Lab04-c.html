@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Задание 3</title>
+    
+    <script>
+//НА ПЯТЕРКУ
+function vremya() {
+        var sec = parseInt(document.getElementById('sec').value);
+        h = Math.round(sec / 3600) ;/*Часы*/
+        m = Math.round((sec % 3600) / 60);/*Минуты*/
+        s = Math.round((sec % 3600 % 60));/*Секунды*/
+        document.getElementById('vrem').innerHTML = 'Это ' + h + ' часов ' + m + ' минут ' + s + ' секунд' ;
+      }
+    </script>
+  </head>
+  
+  <body>
+    <h1>НА ПЯТЕРКУ</h1>
+    <p>Введите количество секунд</p>
+        <input type="text" id="sec"><br>
+        <input type="button" value="Рассчитать" onclick="vremya();">
+    <div id="vrem"></div>
+  </body>
+</html>
